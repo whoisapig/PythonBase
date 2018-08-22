@@ -161,3 +161,8 @@ def createCounter():
 fun = fun2 = createCounter()
 print(fun())
 print(fun())
+
+# 匿名函数
+
+L = list(filter(lambda x: x % 2 == 1, range(1, 20)))
+print(L)
