@@ -81,3 +81,57 @@ def fn(*args):
 ```
 
 可变参数也不是很神秘，Python解释器会把传入的一组参数组装成一个tuple传递给可变参数，因此，在函数内部，直接把变量 args 看成一个 tuple 就好了。
+
+
+#### Python 高阶函数
+
+> Python 内建了map()和reduce() 函数。
+
+map()函数接收两个参数，一个是函数，一个是 **Iterable**，**map**将传入得函数依次作用到序列得每个元素，并把结果作为新得**Iterable**返回。
+
+举个例子：
+```
+def f(x):
+    return x * x
+r = map(f,[1,2,3,4,5])
+print (list(r));
+```
+
+reduce()函数接收两个参数，一个是函数，一个是**Iterable**,返回一个**Iterable**对象
+
+举个例子：（列表求和）
+```
+def f(x, y):
+    return x + y
+r = map(f, [1,2,3,4,5])
+print(list(r))    
+```
+
+filter()函数用于过滤序列。
+
+filter()函数接收两个参数，一个是函数，一个是**Iterable**，返回一个**Iterable**对象，根据第一个函数得返回值是true还是false决定元素是保留还是丢弃
+
+例如：（去偶，留奇）
+
+```
+def is_odd(n):
+    return n % 2 == 1
+list(filter(is_odd, [1, 2, 3, 4, 5]))
+```
+
+
+#### 排序算法
+
+> Python  内置得sorted()函数就可以对list 进行排序：
+
+例如： （普通排序）
+
+```
+sorted([6,-5,9,-44,165,15])
+```
+
+例如：（绝对值排序）
+
+```
+sorted([6,-5,9,-44,165,15], key=abs)
+```
