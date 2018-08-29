@@ -8,7 +8,7 @@ L = []
 for num in range(1,100):
     if (num % 7) == 0:
         L.append(num)
-print L
+print (L)
 
 
 # zip()函数可以把两个 list 变成一个 list：
@@ -37,7 +37,7 @@ d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59, 'Paul': 74 }
 Sum = 0.0;
 for mark in d.itervalues():
     Sum += mark
-print Sum/len(d)
+print (Sum/len(d))
 
 
 # 请根据dict：
